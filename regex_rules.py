@@ -7,8 +7,8 @@ import re
 regex_rules = [
     {
         "id": "double_punctuation",
-        "description": "Mendeteksi tanda baca yang muncul lebih dari satu kali berurutan (,, !! ?? ..)",
-        "pattern": r"[.,!?]{2,}"
+        "description": "Mendeteksi tanda baca yang muncul lebih dari satu kali berurutan (,, !! ?? ...)",
+        "pattern": r"(?<!\.)(([!?;,])\2+)"
     },
     {
         "id": "lowercase_after_period",
@@ -21,6 +21,7 @@ regex_rules = [
         "pattern": r"\s{2,}"
     }
 ]
+
 
 # ========================
 # FUNGSI PENGUJIAN
