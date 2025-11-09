@@ -15,10 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from documents.views import test_regex_view  # tambahkan ini
+from django.urls import path, include  # ← tambahkan include
+from documents.views import test_regex_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test-regex/', test_regex_view),  # endpoint uji regex
+    path('accounts/', include('accounts.urls')),  # ← tambahkan ini
 ]
