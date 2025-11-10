@@ -21,5 +21,7 @@ from documents.views import test_regex_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test-regex/', test_regex_view),  # endpoint uji regex
-    path('accounts/', include('accounts.urls')),  # ← tambahkan ini
+    path('accounts/', include('accounts.urls')),  # halaman login/register/logout
+    path('dashboard/', include('dashboard.urls')),  # halaman dashboard
 ]
+
